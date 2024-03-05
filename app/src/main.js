@@ -614,7 +614,7 @@ if (window.location.hash === '#midjourney' && personalityJSON.name === `Mid Jour
 
 
 // Essay Outline
-if (window.location.hash === '#EssayOutline' && personalityJSON.name === `Essay Outline Prompt Creator`) {
+if (window.location.hash === '#EssayOutline' && personalityJSON.name === `Essay Outline Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -622,7 +622,7 @@ if (window.location.hash === '#EssayOutline' && personalityJSON.name === `Essay 
 
 
 //Mother's Day Card
-if (window.location.hash === '#Mothers-Day' && personalityJSON.name === `Mother's Day Card Prompt Creator`) {
+if (window.location.hash === '#Mothers-Day' && personalityJSON.name === `Mother's Day Card Creator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -630,7 +630,7 @@ if (window.location.hash === '#Mothers-Day' && personalityJSON.name === `Mother'
 
 
 //Multilingual Email
-if (window.location.hash === '#MultilingualEmail' && personalityJSON.name === `Multilingual Email Prompt Creator`) {
+if (window.location.hash === '#MultilingualEmail' && personalityJSON.name === `Multilingual Email Responder`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -638,7 +638,7 @@ if (window.location.hash === '#MultilingualEmail' && personalityJSON.name === `M
 
 
 //Discussion Board Response
-if (window.location.hash === '#DiscussionBoard' && personalityJSON.name === `Discussion Board Prompt Creator`) {
+if (window.location.hash === '#DiscussionBoard' && personalityJSON.name === `Discussion Board Response Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -647,7 +647,7 @@ if (window.location.hash === '#DiscussionBoard' && personalityJSON.name === `Dis
 
 
 //Website Landing Page
-if (window.location.hash === '#WebsiteLanding' && personalityJSON.name === `Website Landing Page Prompt Creator`) {
+if (window.location.hash === '#WebsiteLanding' && personalityJSON.name === `Website Landing Page Copy Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -656,7 +656,7 @@ if (window.location.hash === '#WebsiteLanding' && personalityJSON.name === `Webs
 
 
 //Write like Shakespeare
-if (window.location.hash === '#WritelikeShakespeare' && personalityJSON.name === `Write like Shakespeare Prompt Creator`) {
+if (window.location.hash === '#WritelikeShakespeare' && personalityJSON.name === `Write like Shakespeare`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -665,33 +665,36 @@ if (window.location.hash === '#WritelikeShakespeare' && personalityJSON.name ===
 
 
 //Thanksgiving Card
-if (window.location.hash === '#ThanksgivingCard' && personalityJSON.name === `Thanksgiving Card Prompt Creator`) {
+if (window.location.hash === '#ThanksgivingCard' && personalityJSON.name === `Thanksgiving Card Writer`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
 }
-
-
-//Proposal Generator
-if (window.location.hash === '#ProposalGenerator' && personalityJSON.name === `Proposal Generator Prompt Creator`) {
-    // Call custom popup function
-    personalityCard.click();
-    showStylizedPopup();
-}
-
 
 
 //Paraphraser
-if (window.location.hash === '#Paraphraser' && personalityJSON.name === `Paraphraser Prompt Creator`) {
+if (window.location.hash === '#Paraphraser' && personalityJSON.name === `Paraphraser`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
 }
+
+
+
+//Proposal Generator
+if (window.location.hash === '#ProposalGenerator' && personalityJSON.name === `Proposal Generator`) {
+    // Call custom popup function
+    personalityCard.click();
+    showStylizedPopup();
+}
+
+
+
 
 
 
 //Pokemon Fanfiction
-if (window.location.hash === '#PokemonFanfiction' && personalityJSON.name === `Pokemon Fanfiction Prompt Creator`) {
+if (window.location.hash === '#PokemonFanfiction' && personalityJSON.name === `Pokemon Fanfiction Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -700,7 +703,7 @@ if (window.location.hash === '#PokemonFanfiction' && personalityJSON.name === `P
 
 
 //Refined Legal
-if (window.location.hash === '#RefinedLegal' && personalityJSON.name === `Refined Legal Prompt Creator`) {
+if (window.location.hash === '#RefinedLegal' && personalityJSON.name === `Refined Legal Writing`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -709,7 +712,7 @@ if (window.location.hash === '#RefinedLegal' && personalityJSON.name === `Refine
 
 
 //Blog Post Meta Description Generator
-if (window.location.hash === '#BlogPost' && personalityJSON.name === `Blog Post Meta Prompt Creator`) {
+if (window.location.hash === '#BlogPost' && personalityJSON.name === `Blog Post Meta Description Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -718,7 +721,7 @@ if (window.location.hash === '#BlogPost' && personalityJSON.name === `Blog Post 
 
 
 //Essay Thesis Statement Generator
-if (window.location.hash === '#EssayThesis' && personalityJSON.name === `Essay Thesis Statement Prompt Creator`) {
+if (window.location.hash === '#EssayThesis' && personalityJSON.name === `Essay Thesis Statement Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -727,7 +730,7 @@ if (window.location.hash === '#EssayThesis' && personalityJSON.name === `Essay T
 
 
 //Grammar Help
-if (window.location.hash === '#GrammarHelp' && personalityJSON.name === `Grammar Help Prompt Creator`) {
+if (window.location.hash === '#GrammarHelp' && personalityJSON.name === `Grammar Help`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -736,7 +739,7 @@ if (window.location.hash === '#GrammarHelp' && personalityJSON.name === `Grammar
 
 
 //Client Communication
-if (window.location.hash === '#ClientCommunication' && personalityJSON.name === `Client Communication Prompt Creator`) {
+if (window.location.hash === '#ClientCommunication' && personalityJSON.name === `Client Communication`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -745,7 +748,7 @@ if (window.location.hash === '#ClientCommunication' && personalityJSON.name === 
 
 
 //Message Expander
-if (window.location.hash === '#MessageExpander' && personalityJSON.name === `Message Expander Prompt Creator`) {
+if (window.location.hash === '#MessageExpander' && personalityJSON.name === `Message Expander`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -754,7 +757,7 @@ if (window.location.hash === '#MessageExpander' && personalityJSON.name === `Mes
 
 
 //Bedtime Story Teller
-if (window.location.hash === '#BedtimeStory' && personalityJSON.name === `Bedtime Story Prompt Creator`) {
+if (window.location.hash === '#BedtimeStory' && personalityJSON.name === `Bedtime Story Teller`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -763,7 +766,7 @@ if (window.location.hash === '#BedtimeStory' && personalityJSON.name === `Bedtim
 
 
 //Paragraph Generator
-if (window.location.hash === '#ParagraphGenerator' && personalityJSON.name === `Paragraph Generator Prompt Creator`) {
+if (window.location.hash === '#ParagraphGenerator' && personalityJSON.name === `Paragraph Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -772,7 +775,7 @@ if (window.location.hash === '#ParagraphGenerator' && personalityJSON.name === `
 
 
 //Structured Press Release Generator
-if (window.location.hash === '#StructuredPress' && personalityJSON.name === `Structured Press Prompt Creator`) {
+if (window.location.hash === '#StructuredPress' && personalityJSON.name === `Structured Press Release Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -781,7 +784,7 @@ if (window.location.hash === '#StructuredPress' && personalityJSON.name === `Str
 
 
 //Discussion Question Assistant
-if (window.location.hash === '#DiscussionQuestion' && personalityJSON.name === `Discussion Question Prompt Creator`) {
+if (window.location.hash === '#DiscussionQuestion' && personalityJSON.name === `Discussion Question Assistant`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -790,7 +793,7 @@ if (window.location.hash === '#DiscussionQuestion' && personalityJSON.name === `
 
 
 //Job Elevator Pitch Generator
-if (window.location.hash === '#JobElevator' && personalityJSON.name === `Job Elevator Prompt Creator`) {
+if (window.location.hash === '#JobElevator' && personalityJSON.name === `Job Elevator Pitch Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -799,7 +802,7 @@ if (window.location.hash === '#JobElevator' && personalityJSON.name === `Job Ele
 
 
 //Tweet Generator
-if (window.location.hash === '#Tweet' && personalityJSON.name === `Tweet Prompt Creator`) {
+if (window.location.hash === '#Tweet' && personalityJSON.name === `Tweet Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -808,7 +811,7 @@ if (window.location.hash === '#Tweet' && personalityJSON.name === `Tweet Prompt 
 
 
 //Social Media Ad Copy
-if (window.location.hash === '#SocialMedia' && personalityJSON.name === `Social Media Prompt Creator`) {
+if (window.location.hash === '#SocialMedia' && personalityJSON.name === `Social Media Ad Copy`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -817,7 +820,7 @@ if (window.location.hash === '#SocialMedia' && personalityJSON.name === `Social 
 
 
 //Movie Recommender
-if (window.location.hash === '#MovieRecommender' && personalityJSON.name === `Movie Recommender Prompt Creator`) {
+if (window.location.hash === '#MovieRecommender' && personalityJSON.name === `Movie Recommender`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -826,7 +829,7 @@ if (window.location.hash === '#MovieRecommender' && personalityJSON.name === `Mo
 
 
 //Detailed Outline Generator
-if (window.location.hash === '#DetailedOutline' && personalityJSON.name === `Detailed Outline Prompt Creator`) {
+if (window.location.hash === '#DetailedOutline' && personalityJSON.name === `Detailed Outline Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -835,7 +838,7 @@ if (window.location.hash === '#DetailedOutline' && personalityJSON.name === `Det
 
 
 //Sous-Chef
-if (window.location.hash === '#Sous-Chef' && personalityJSON.name === `Sous-Chef Prompt Creator`) {
+if (window.location.hash === '#Sous-Chef' && personalityJSON.name === `Sous-Chef`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -844,7 +847,7 @@ if (window.location.hash === '#Sous-Chef' && personalityJSON.name === `Sous-Chef
 
 
 //Grocery List Writer
-if (window.location.hash === '#GroceryList' && personalityJSON.name === `Grocery List Writer Prompt Creator`) {
+if (window.location.hash === '#GroceryList' && personalityJSON.name === `Grocery List Writer`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -853,7 +856,7 @@ if (window.location.hash === '#GroceryList' && personalityJSON.name === `Grocery
 
 
 //Brainstorming Tool
-if (window.location.hash === '#BrainstormingTool' && personalityJSON.name === `Brainstorming Tool Prompt Creator`) {
+if (window.location.hash === '#BrainstormingTool' && personalityJSON.name === `Brainstorming Tool`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -862,7 +865,7 @@ if (window.location.hash === '#BrainstormingTool' && personalityJSON.name === `B
 
 
 //Sound Prolific
-if (window.location.hash === '#SoundProlific' && personalityJSON.name === `Sound Prolific Prompt Creator`) {
+if (window.location.hash === '#SoundProlific' && personalityJSON.name === `Sound Prolific`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -871,7 +874,7 @@ if (window.location.hash === '#SoundProlific' && personalityJSON.name === `Sound
 
 
 //Essay Topic Generator
-if (window.location.hash === '#EssayTopic' && personalityJSON.name === `Essay Topic Prompt Creator`) {
+if (window.location.hash === '#EssayTopic' && personalityJSON.name === `Essay Topic Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -880,7 +883,7 @@ if (window.location.hash === '#EssayTopic' && personalityJSON.name === `Essay To
 
 
 //LinkedIn Post Creator
-if (window.location.hash === ' #LinkedInPost' && personalityJSON.name === `LinkedIn Postc Prompt Creator`) {
+if (window.location.hash === ' #LinkedInPost' && personalityJSON.name === `LinkedIn Post Creator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -889,7 +892,7 @@ if (window.location.hash === ' #LinkedInPost' && personalityJSON.name === `Linke
 
 
 //Paragraph Expander
-if (window.location.hash === ' #ParagraphExpander' && personalityJSON.name === `Paragraph Expander Prompt Creator`) {
+if (window.location.hash === ' #ParagraphExpander' && personalityJSON.name === `Paragraph Expander`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -898,7 +901,7 @@ if (window.location.hash === ' #ParagraphExpander' && personalityJSON.name === `
 
 
 //Cover Letter Generator
-if (window.location.hash === ' #CoverLetter' && personalityJSON.name === `Cover Letter Generator Prompt Creator`) {
+if (window.location.hash === ' #CoverLetter' && personalityJSON.name === `Cover Letter Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -907,7 +910,7 @@ if (window.location.hash === ' #CoverLetter' && personalityJSON.name === `Cover 
 
 
 //Birthday Card Creator
-if (window.location.hash === ' #BirthdayCard' && personalityJSON.name === `Birthday Card Creator Prompt Creator`) {
+if (window.location.hash === ' #BirthdayCard' && personalityJSON.name === `Birthday Card Creator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -916,7 +919,7 @@ if (window.location.hash === ' #BirthdayCard' && personalityJSON.name === `Birth
 
 
 //Question Generator
-if (window.location.hash === ' #QuestionGenerator' && personalityJSON.name === `Question Prompt Creator`) {
+if (window.location.hash === ' #QuestionGenerator' && personalityJSON.name === `Question Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -925,7 +928,7 @@ if (window.location.hash === ' #QuestionGenerator' && personalityJSON.name === `
 
 
 //TikTok Script Writer
-if (window.location.hash === ' #TikTokScript' && personalityJSON.name === `TikTok Script Prompt Creator`) {
+if (window.location.hash === ' #TikTokScript' && personalityJSON.name === `TikTok Script Writer`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -934,7 +937,7 @@ if (window.location.hash === ' #TikTokScript' && personalityJSON.name === `TikTo
 
 
 //Email Subject Line Generator
-if (window.location.hash === ' #EmailSubject' && personalityJSON.name === `Email Subject Line  Prompt Creator`) {
+if (window.location.hash === ' #EmailSubject' && personalityJSON.name === `Email Subject Line Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -943,7 +946,7 @@ if (window.location.hash === ' #EmailSubject' && personalityJSON.name === `Email
 
 
 //Facebook Post Generator
-if (window.location.hash === ' #FacebookPost' && personalityJSON.name === `Facebook Post Prompt Creator`) {
+if (window.location.hash === ' #FacebookPost' && personalityJSON.name === `Facebook Post Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -952,7 +955,7 @@ if (window.location.hash === ' #FacebookPost' && personalityJSON.name === `Faceb
 
 
 //Essay Title Generator
-if (window.location.hash === ' #EssayTitle' && personalityJSON.name === `Essay Title Prompt Creator`) {
+if (window.location.hash === ' #EssayTitle' && personalityJSON.name === `Essay Title Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -961,7 +964,7 @@ if (window.location.hash === ' #EssayTitle' && personalityJSON.name === `Essay T
 
 
 //English Question Analyzer
-if (window.location.hash === ' #EnglishQuestion' && personalityJSON.name === `English Question Analyzer Prompt Creator`) {
+if (window.location.hash === ' #EnglishQuestion' && personalityJSON.name === `English Question Analyzer`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -970,7 +973,7 @@ if (window.location.hash === ' #EnglishQuestion' && personalityJSON.name === `En
 
 
 //Universal Translator
-if (window.location.hash === ' #UniversalTranslator' && personalityJSON.name === `Universal Translator Prompt Creator`) {
+if (window.location.hash === ' #UniversalTranslator' && personalityJSON.name === `Universal Translator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -979,7 +982,7 @@ if (window.location.hash === ' #UniversalTranslator' && personalityJSON.name ===
 
 
 //Flexible Autowrite with Style
-if (window.location.hash === ' #FlexibleAutowrite' && personalityJSON.name === `Flexible Autowrite with Style Prompt Creator`) {
+if (window.location.hash === ' #FlexibleAutowrite' && personalityJSON.name === `Flexible Autowrite with Style`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -988,7 +991,7 @@ if (window.location.hash === ' #FlexibleAutowrite' && personalityJSON.name === `
 
 
 //Ad Copy Generator
-if (window.location.hash === ' #AdCopy' && personalityJSON.name === `Ad Copy Prompt Creator`) {
+if (window.location.hash === ' #AdCopy' && personalityJSON.name === `Ad Copy Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -997,7 +1000,7 @@ if (window.location.hash === ' #AdCopy' && personalityJSON.name === `Ad Copy Pro
 
 
 //Instagram Caption Generator
-if (window.location.hash === ' #InstagramCaption' && personalityJSON.name === `Instagram Caption Prompt Creator`) {
+if (window.location.hash === ' #InstagramCaption' && personalityJSON.name === `Instagram Caption Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1006,7 +1009,7 @@ if (window.location.hash === ' #InstagramCaption' && personalityJSON.name === `I
 
 
 //Flexible Press Release Generator
-if (window.location.hash === ' #FlexiblePress' && personalityJSON.name === `Flexible Press Release Prompt Creator`) {
+if (window.location.hash === ' #FlexiblePress' && personalityJSON.name === `Flexible Press Release Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1015,7 +1018,7 @@ if (window.location.hash === ' #FlexiblePress' && personalityJSON.name === `Flex
 
 
 //Discussion Post Commenter
-if (window.location.hash === ' #DiscussionPost' && personalityJSON.name === `Discussion Post Commenter Prompt Creator`) {
+if (window.location.hash === ' #DiscussionPost' && personalityJSON.name === `Discussion Post Commenter`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1024,7 +1027,7 @@ if (window.location.hash === ' #DiscussionPost' && personalityJSON.name === `Dis
 
 
 //Listicle Subheadings Generator
-if (window.location.hash === ' #ListicleSubheadings' && personalityJSON.name === `Listicle Subheadings Prompt Creator`) {
+if (window.location.hash === ' #ListicleSubheadings' && personalityJSON.name === `Listicle Subheadings Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1033,7 +1036,7 @@ if (window.location.hash === ' #ListicleSubheadings' && personalityJSON.name ===
 
 
 //Greeting Card Writer
-if (window.location.hash === ' #GreetingCard' && personalityJSON.name === `Greeting Card Writer Prompt Creator`) {
+if (window.location.hash === ' #GreetingCard' && personalityJSON.name === `Greeting Card Writer`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1042,7 +1045,7 @@ if (window.location.hash === ' #GreetingCard' && personalityJSON.name === `Greet
 
 
 //Value Ladder Generator
-if (window.location.hash === ' #ValueLadder' && personalityJSON.name === `Value Ladder Prompt Creator`) {
+if (window.location.hash === ' #ValueLadder' && personalityJSON.name === `Value Ladder Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();
@@ -1051,7 +1054,7 @@ if (window.location.hash === ' #ValueLadder' && personalityJSON.name === `Value 
 
 
 // Harry Potter Fanfiction Generator
-if (window.location.hash === ' # HarryPotter' && personalityJSON.name === ` Harry Potter Fanfiction Prompt Creator`) {
+if (window.location.hash === ' # HarryPotter' && personalityJSON.name === ` Harry Potter Fanfiction Generator`) {
     // Call custom popup function
     personalityCard.click();
     showStylizedPopup();

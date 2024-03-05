@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wirter, By Waleed Ajmal</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg"
+        type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="src/utils.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://unpkg.com/intro.js/introjs.css" rel="stylesheet">
+<!-- Include Notify.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css" rel="stylesheet">
+
+</head>
+
+
+
+
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/intro.js/intro.js"></script>
+    <!-- Include Notify.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
+<!-- Include Intro.js JavaScript -->
+<script src="https://unpkg.com/intro.js/intro.js"></script>
+
+    <div class="notification-bar">
+        <div class="message">
+          Do you want an app tutorial?
+        </div>
+        <div class="actions">
+          <button id="btn-accept-tutorial">✓</button>
+          <button id="btn-decline-tutorial">✗</button>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
+<!-- Include Intro.js JavaScript -->
+
+        
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <button class="material-symbols-outlined btn-textual" id="btn-hide-sidebar">
+                    arrow_back_ios_new
+                </button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg" id="gemin-pro-logo">
+                <div id="title-div">
+                    <div id="zodiac-branding">Writer </div>
+                    <div id="gemini-pro-branding">Powered By Gemini Pro</div>
+                </div>
+                <button class="badge" id="btn-whatsnew">
+                    <span id="badge-version"></span>
+                </button>
+            </div>
+            <div class="navbar">
+                <div class="navbar-tab">Personalities</div>
+                <div class="navbar-tab">Quick Start</div>
+                <div class="navbar-tab-highlight"></div>
+            </div>
+
+            <div id="sidebar-content">
+                <div class="sidebar-section" id="card-personality">
+                    <label class="card-personality" id="card-personality-default"
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.fonearena.com/blog/wp-content/uploads/2023/12/Google-Gemini-AI-1024x577.jpg')">
+                        <input type="radio" name="personality" value="zodiac" checked>
+                        <div>
+                            <h3 class="personality-title">Help</h3>
+                            <p class="personality-description">what is this platform?</p>
+                            <p class="personality-prompt">You are zodiac, a helpful assistant created by Waleed,
+                                built
+                                upon Google's Gemini Pro model. Gemini Pro is a new LLM (Large Language Model) release
+                                by
+                                Google on December 2023. Your purpose is being a helpful assistant to the user.</p>
+                        </div>
+                        <!-- Your existing HTML code for the personality card -->
+<div id="myPersonality" style="display: none;">
+    <label class="card-personality" id="card-personality-myPersonality">
+        <input type="radio" name="personality" value="Creative Writing bot">
+        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.fonearena.com/blog/wp-content/uploads/2023/12/Google-Gemini-AI-1024x577.jpg')">
+            <h3 class="personality-title">Creative Writing</h3>
+            <p class="personality-description">
+            Let Your Creativity Explode, learn grow create!</p>
+            <p class="personality-prompt">how to write creatively</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-myPersonality">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-myPersonality">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-myPersonality">delete</button>
+    </label>
+</div>
+
+<!-- Summarizer personality card -->
+<div id="summarizerPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Summarizer">
+        <div>
+            <h3 class="personality-title">Summarizer</h3>
+            <p class="personality-description">Summarize the main points and key info from any text or article.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Summarizer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Summarizer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Summarizer">delete</button>
+    </label>
+</div>
+
+<!-- Explain Like I'm 5 personality card -->
+<div id="explainLikeIm5Personality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Explain Like I'm 5">
+        <div>
+            <h3 class="personality-title">Explain Like I'm 5</h3>
+            <p class="personality-description">Take a complex topic and simplify it to make it easier to understand.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Explain Like I'm 5">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Explain Like I'm 5">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Explain Like I'm 5">delete</button>
+    </label>
+</div>
+
+<!-- Rewrite Content personality card -->
+<div id="rewriteContentPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Rewrite Content">
+        <div>
+            <h3 class="personality-title">Rewrite Content</h3>
+            <p class="personality-description">Rewrite content in a different way, while keeping the same meaning.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Rewrite Content">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Rewrite Content">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Rewrite Content">delete</button>
+    </label>
+</div>
+
+<!-- Email Responder personality card -->
+<div id="emailResponderPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Email Responder">
+        <div>
+            <h3 class="personality-title">Email Responder</h3>
+            <p class="personality-description">Based on an email and short response, get a well-written reply.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Email Responder">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Email Responder">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Email Responder">delete</button>
+    </label>
+</div>
+
+<!-- Magic Editor personality card -->
+<div id="magicEditorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Magic Editor">
+        <div>
+            <h3 class="personality-title">Magic Editor</h3>
+            <p class="personality-description">Edit a document or message to improve its clarity, tone, and style.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Magic Editor">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Magic Editor">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Magic Editor">delete</button>
+    </label>
+</div>
+
+<!-- AI Speech Writer personality card -->
+<div id="aiSpeechWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="AI Speech Writer">
+        <div>
+            <h3 class="personality-title">AI Speech Writer</h3>
+            <p class="personality-description">Generate a speech using an outline or description, topic, and sources or quotes.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-AI Speech Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-AI Speech Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-AI Speech Writer">delete</button>
+    </label>
+</div>
+
+<!-- AI Writer personality card -->
+<div id="aiWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="AI Writer">
+        <div>
+            <h3 class="personality-title">AI Writer</h3>
+            <p class="personality-description">Use AI to write content on any topic and in any format.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-AI Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-AI Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-AI Writer">delete</button>
+    </label>
+</div>
+
+<!-- Mid Journey Prompt Creator personality card -->
+<div id="midJourneyPromptCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Mid Journey Prompt Creator">
+        <div>
+            <h3 class="personality-title">Mid Journey Prompt Creator</h3>
+            <p class="personality-description">Create the best mid-journey bots in the world.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Mid Journey Prompt Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Mid Journey Prompt Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Mid Journey Prompt Creator">delete</button>
+    </label>
+</div>
+
+<!-- add a personality here -->
+
+<!-- Essay Outline Generator Personality Card -->
+<div id="essayOutlineGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Essay Outline Generator">
+        <div>
+            <h3 class="personality-title">Essay Outline Generator</h3>
+            <p class="personality-description">Create an outline for your essay with a clear structure.</p>
+            <p class="personality-prompt">Generate an outline for your essay.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Essay Outline Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Essay Outline Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Essay Outline Generator">delete</button>
+    </label>
+</div>
+
+<!-- Mother's Day Card Creator Personality Card -->
+<div id="mothersDayCardCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Mother's Day Card Creator">
+        <div>
+            <h3 class="personality-title">Mother's Day Card Creator</h3>
+            <p class="personality-description">Create a thoughtful and well-written Mother's Day card.</p>
+            <p class="personality-prompt">Craft a heartfelt Mother's Day card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Mother's Day Card Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Mother's Day Card Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Mother's Day Card Creator">delete</button>
+    </label>
+</div>
+
+<!-- Multilingual Email Responder Personality Card -->
+<div id="multilingualEmailResponderPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Multilingual Email Responder">
+        <div>
+            <h3 class="personality-title">Multilingual Email Responder</h3>
+            <p class="personality-description">Generate emails in any language based on a received email and shorthand response.</p>
+            <p class="personality-prompt">Craft responses in multiple languages based on received emails.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Multilingual Email Responder">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Multilingual Email Responder">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Multilingual Email Responder">delete</button>
+    </label>
+</div>
+
+<!-- Discussion Board Response Generator Personality Card -->
+<div id="discussionBoardResponseGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Discussion Board Response Generator">
+        <div>
+            <h3 class="personality-title">Discussion Board Response Generator</h3>
+            <p class="personality-description">AI-generated response to a discussion board question or prompt.</p>
+            <p class="personality-prompt">Generate a response to a discussion board question.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Discussion Board Response Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Discussion Board Response Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Discussion Board Response Generator">delete</button>
+    </label>
+</div>
+
+<!-- Website Landing Page Copy Generator Personality Card -->
+<div id="websiteLandingPageCopyGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Website Landing Page Copy Generator">
+        <div>
+            <h3 class="personality-title">Website Landing Page Copy Generator</h3>
+            <p class="personality-description">Generate compelling website landing page copy that converts users.</p>
+            <p class="personality-prompt">Create persuasive copy for landing pages.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Website Landing Page Copy Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Website Landing Page Copy Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Website Landing Page Copy Generator">delete</button>
+    </label>
+</div>
+
+<!-- Write like Shakespeare Personality Card -->
+<div id="writeLikeShakespearePersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Write like Shakespeare">
+        <div>
+            <h3 class="personality-title">Write like Shakespeare</h3>
+            <p class="personality-description">Generate text in the style of the Bard himself.</p>
+            <p class="personality-prompt">Compose prose or poetry reminiscent of Shakespearean language.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Write like Shakespeare">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Write like Shakespeare">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Write like Shakespeare">delete</button>
+    </label>
+</div>
+
+<!-- Thanksgiving Card Writer Personality Card -->
+<div id="thanksgivingCardWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Thanksgiving Card Writer">
+        <div>
+            <h3 class="personality-title">Thanksgiving Card Writer</h3>
+            <p class="personality-description">Create warm, appreciative Thanksgiving cards highlighting shared experiences.</p>
+            <p class="personality-prompt">Craft heartfelt messages for Thanksgiving cards.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Thanksgiving Card Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Thanksgiving Card Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Thanksgiving Card Writer">delete</button>
+    </label>
+</div>
+
+<!-- Paraphraser Personality Card -->
+<div id="paraphraserPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Paraphraser">
+        <div>
+            <h3 class="personality-title">Paraphraser</h3>
+            <p class="personality-description">Reword and rephrase content while retaining its original meaning.</p>
+            <p class="personality-prompt">Paraphrase text to convey the same message in different words.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Paraphraser">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Paraphraser">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Paraphraser">delete</button>
+    </label>
+</div>
+
+<!-- Pokemon Fanfiction Generator Personality Card -->
+<div id="pokemonFanfictionGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Pokemon Fanfiction Generator">
+        <div>
+            <h3 class="personality-title">Pokemon Fanfiction Generator</h3>
+            <p class="personality-description">Generate Pokemon fanfiction from a summary, plot, and characters.</p>
+            <p class="personality-prompt">Create engaging stories set in the world of Pokemon.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Pokemon Fanfiction Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Pokemon Fanfiction Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Pokemon Fanfiction Generator">delete</button>
+    </label>
+</div>
+
+<!-- Refined Legal Writing Personality Card -->
+<div id="refinedLegalWritingPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Refined Legal Writing">
+        <div>
+            <h3 class="personality-title">Refined Legal Writing</h3>
+            <p class="personality-description">Rewrite your copy to reflect the style and tone of a legal document.</p>
+            <p class="personality-prompt">Transform your text into a formal legal document.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Refined Legal Writing">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Refined Legal Writing">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Refined Legal Writing">delete</button>
+    </label>
+</div>
+
+<!-- Blog Post Meta Description Generator Personality Card -->
+<div id="blogPostMetaDescriptionGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Blog Post Meta Description Generator">
+        <div>
+            <h3 class="personality-title">Blog Post Meta Description Generator</h3>
+            <p class="personality-description">Generate concise and effective meta descriptions for your blog post.</p>
+            <p class="personality-prompt">Create a meta description for your blog post.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Blog Post Meta Description Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Blog Post Meta Description Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Blog Post Meta Description Generator">delete</button>
+    </label>
+</div>
+
+<!-- Essay Thesis Statement Generator Personality Card -->
+<div id="essayThesisStatementGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Essay Thesis Statement Generator">
+        <div>
+            <h3 class="personality-title">Essay Thesis Statement Generator</h3>
+            <p class="personality-description">Generate a clear and concise thesis statement for an essay.</p>
+            <p class="personality-prompt">Generate a thesis statement for your essay.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Essay Thesis Statement Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Essay Thesis Statement Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Essay Thesis Statement Generator">delete</button>
+    </label>
+</div>
+
+<!-- Grammar Help Personality Card -->
+<div id="grammarHelpPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Grammar Help">
+        <div>
+            <h3 class="personality-title">Grammar Help</h3>
+            <p class="personality-description">Get answers to grammar questions with AI.</p>
+            <p class="personality-prompt">Ask grammar-related questions and receive assistance.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Grammar Help">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Grammar Help">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Grammar Help">delete</button>
+    </label>
+</div>
+
+<!-- Client Communication Personality Card -->
+<div id="clientCommunicationPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Client Communication">
+        <div>
+            <h3 class="personality-title">Client Communication</h3>
+            <p class="personality-description">Compose a simple, professional, and concise message to your client.</p>
+            <p class="personality-prompt">Craft a message for your client.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Client Communication">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Client Communication">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Client Communication">delete</button>
+    </label>
+</div>
+
+<!-- Message Expander Personality Card -->
+<div id="messageExpanderPersonality" class="personality-card">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Message Expander">
+        <div>
+            <h3 class="personality-title">Message Expander</h3>
+            <p class="personality-description">Expand shorthand or rough draft messages for various platforms and purposes.</p>
+            <p class="personality-prompt">Craft a message for your client.</p>
+        </div>
+        <div class="btn-group">
+            <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Message Expander">edit</button>
+            <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Message Expander">share</button>
+            <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Message Expander">delete</button>
+        </div>
+    </label>
+</div>
+
+<!-- Bedtime Story Teller Personality Card -->
+<div id="bedtimeStoryTellerPersonality" class="personality-card">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Bedtime Story Teller">
+        <div>
+            <h3 class="personality-title">Bedtime Story Teller</h3>
+            <p class="personality-description">Create a bedtime story tailored to a specific type and mood.</p>
+            <p class="personality-prompt">Craft a message for your client.</p>
+        </div>
+        <div class="btn-group">
+            <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Bedtime Story Teller">edit</button>
+            <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Bedtime Story Teller">share</button>
+            <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Bedtime Story Teller">delete</button>
+        </div>
+    </label>
+</div>
+
+<!-- Paragraph Generator Personality Card -->
+<div id="paragraphGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Paragraph Generator">
+        <div>
+            <h3 class="personality-title">Paragraph Generator</h3>
+            <p class="personality-description">Create high-quality paragraphs based on a given topic or text.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Paragraph Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Paragraph Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Paragraph Generator">delete</button>
+    </label>
+</div>
+
+<!-- Structured Press Release Generator Personality Card -->
+<div id="structuredPressReleaseGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Structured Press Release Generator">
+        <div>
+            <h3 class="personality-title">Structured Press Release Generator</h3>
+            <p class="personality-description">Generate a fantastic, well-structured press release that will impress readers.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Structured Press Release Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Structured Press Release Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Structured Press Release Generator">delete</button>
+    </label>
+</div>
+
+<!-- Discussion Question Assistant Personality Card -->
+<div id="discussionQuestionAssistantPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Discussion Question Assistant">
+        <div>
+            <h3 class="personality-title">Discussion Question Assistant</h3>
+            <p class="personality-description">Answer the provided discussion question in great detail.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Discussion Question Assistant">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Discussion Question Assistant">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Discussion Question Assistant">delete</button>
+    </label>
+</div>
+
+<!-- Job Elevator Pitch Generator Personality Card -->
+<div id="jobElevatorPitchGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Job Elevator Pitch Generator">
+        <div>
+            <h3 class="personality-title">Job Elevator Pitch Generator</h3>
+            <p class="personality-description">Craft a compelling elevator pitch for candidates interviewing for a job.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Job Elevator Pitch Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Job Elevator Pitch Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Job Elevator Pitch Generator">delete</button>
+    </label>
+</div>
+
+<!-- Tweet Generator Personality Card -->
+<div id="tweetGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Tweet Generator">
+        <div>
+            <h3 class="personality-title">Tweet Generator</h3>
+            <p class="personality-description">Generate original tweet ideas based on a given idea or theme.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Tweet Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Tweet Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Tweet Generator">delete</button>
+    </label>
+</div>
+
+<!-- Social Media Ad Copy Personality Card -->
+<div id="socialMediaAdCopyPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Social Media Ad Copy">
+        <div>
+            <h3 class="personality-title">Social Media Ad Copy</h3>
+            <p class="personality-description">Generate compelling social media ad copy for your product or service.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Social Media Ad Copy">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Social Media Ad Copy">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Social Media Ad Copy">delete</button>
+    </label>
+</div>
+
+<!-- Movie Recommender Personality Card -->
+<div id="movieRecommenderPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Movie Recommender">
+        <div>
+            <h3 class="personality-title">Movie Recommender</h3>
+            <p class="personality-description">Find the perfect movie based on your preferences.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Movie Recommender">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Movie Recommender">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Movie Recommender">delete</button>
+    </label>
+</div>
+
+<!-- Detailed Outline Generator Personality Card -->
+<div id="detailedOutlineGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Detailed Outline Generator">
+        <div>
+            <h3 class="personality-title">Detailed Outline Generator</h3>
+            <p class="personality-description">Generate a detailed chapter outline for a book or article.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Detailed Outline Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Detailed Outline Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Detailed Outline Generator">delete</button>
+    </label>
+</div>
+
+<!-- Sous-Chef Personality Card -->
+<div id="sousChefPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Sous-Chef">
+        <div>
+            <h3 class="personality-title">Sous-Chef</h3>
+            <p class="personality-description">Find meal ideas and recipes based on cuisine and dietary restrictions or special requests.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Sous-Chef">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Sous-Chef">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Sous-Chef">delete</button>
+    </label>
+</div>
+
+<!-- Grocery List Writer Personality Card -->
+<div id="groceryListWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Grocery List Writer">
+        <div>
+            <h3 class="personality-title">Grocery List Writer</h3>
+            <p class="personality-description">Create a grocery list for shopping, considering your specified foods and events.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Grocery List Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Grocery List Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Grocery List Writer">delete</button>
+    </label>
+</div>
+
+<!-- Brainstorming Tool Personality Card -->
+<div id="brainstormingToolPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Brainstorming Tool">
+        <div>
+            <h3 class="personality-title">Brainstorming Tool</h3>
+            <p class="personality-description">Generate ideas to help brainstorm based on a given problem or text input.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Brainstorming Tool">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Brainstorming Tool">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Brainstorming Tool">delete</button>
+    </label>
+</div>
+
+<!-- Sound Prolific Personality Card -->
+<div id="soundProlificPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Sound Prolific">
+        <div>
+            <h3 class="personality-title">Sound Prolific</h3>
+            <p class="personality-description">Create evocative writing that incorporates vivid language, metaphors, and symbols.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Sound Prolific">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Sound Prolific">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Sound Prolific">delete</button>
+    </label>
+</div>
+
+<!-- Essay Topic Generator Personality Card -->
+<div id="essayTopicGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Essay Topic Generator">
+        <div>
+            <h3 class="personality-title">Essay Topic Generator</h3>
+            <p class="personality-description">Generate a list of essay topics based on a subject or keyword.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Essay Topic Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Essay Topic Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Essay Topic Generator">delete</button>
+    </label>
+</div>
+
+<!-- LinkedIn Post Creator Personality Card -->
+<div id="linkedInPostCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="LinkedIn Post Creator">
+        <div>
+            <h3 class="personality-title">LinkedIn Post Creator</h3>
+            <p class="personality-description">Based on a short description or outline, draft a compelling LinkedIn post.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-LinkedIn Post Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-LinkedIn Post Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-LinkedIn Post Creator">delete</button>
+    </label>
+</div>
+
+<!-- Paragraph Expander Personality Card -->
+<div id="paragraphExpanderPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Paragraph Expander">
+        <div>
+            <h3 class="personality-title">Paragraph Expander</h3>
+            <p class="personality-description">Expand an existing idea or piece of writing into a high-quality paragraph.</p>
+            <p class="personality-prompt">Think about this prompt.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Paragraph Expander">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Paragraph Expander">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Paragraph Expander">delete</button>
+    </label>
+</div>
+
+<!-- Birthday Card Creator Personality Card -->
+<div id="birthdayCardCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Birthday Card Creator">
+        <div>
+            <h3 class="personality-title">Birthday Card Creator</h3>
+            <p class="personality-description">Generates personalized and heartfelt birthday cards for any recipient.</p>
+            <p class="personality-prompt">Create a birthday card for your loved one.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Birthday Card Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Birthday Card Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Birthday Card Creator">delete</button>
+    </label>
+</div>
+
+<!-- Question Generator Personality Card -->
+<div id="questionGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Question Generator">
+        <div>
+            <h3 class="personality-title">Question Generator</h3>
+            <p class="personality-description">Generate a clear and polite question based on the information to find out and who you are asking.</p>
+            <p class="personality-prompt">Craft a question for your conversation.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Question Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Question Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Question Generator">delete</button>
+    </label>
+</div>
+
+<!-- TikTok Script Writer Personality Card -->
+<div id="tikTokScriptWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="TikTok Script Writer">
+        <div>
+            <h3 class="personality-title">TikTok Script Writer</h3>
+            <p class="personality-description">Write a script for a TikTok video based on the background information or topic.</p>
+            <p class="personality-prompt">Craft a script for your TikTok video.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-TikTok Script Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-TikTok Script Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-TikTok Script Writer">delete</button>
+    </label>
+</div>
+
+<!-- Email Subject Line Generator Personality Card -->
+<div id="emailSubjectLineGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Email Subject Line Generator">
+        <div>
+            <h3 class="personality-title">Email Subject Line Generator</h3>
+            <p class="personality-description">Generate an email subject line based on the email and goal.</p>
+            <p class="personality-prompt">Craft a subject line for your email.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Email Subject Line Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Email Subject Line Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Email Subject Line Generator">delete</button>
+    </label>
+</div>
+
+<!-- Facebook Post Generator Personality Card -->
+<div id="facebookPostGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Facebook Post Generator">
+        <div>
+            <h3 class="personality-title">Facebook Post Generator</h3>
+            <p class="personality-description">Expand a summary or idea into a full-length Facebook post.</p>
+            <p class="personality-prompt">Write a post for your Facebook account.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Facebook Post Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Facebook Post Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Facebook Post Generator">delete</button>
+    </label>
+</div>
+
+<!-- Essay Title Generator Personality Card -->
+<div id="essayTitleGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Essay Title Generator">
+        <div>
+            <h3 class="personality-title">Essay Title Generator</h3>
+            <p class="personality-description">Generate an engaging and relevant title for your essay.</p>
+            <p class="personality-prompt">Create a title for your essay.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Essay Title Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Essay Title Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Essay Title Generator">delete</button>
+    </label>
+</div>
+
+<!-- English Question Analyzer Personality Card -->
+<div id="englishQuestionAnalyzerPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="English Question Analyzer">
+        <div>
+            <h3 class="personality-title">English Question Analyzer</h3>
+            <p class="personality-description">Analyze and answer questions in English.</p>
+            <p class="personality-prompt">Analyze and answer English questions.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-English Question Analyzer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-English Question Analyzer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-English Question Analyzer">delete</button>
+    </label>
+</div>
+
+<!-- Universal Translator Personality Card -->
+<div id="universalTranslatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Universal Translator">
+        <div>
+            <h3 class="personality-title">Universal Translator</h3>
+            <p class="personality-description">Accurately translate text between languages with AI.</p>
+            <p class="personality-prompt">Translate text between languages.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Universal Translator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Universal Translator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Universal Translator">delete</button>
+    </label>
+</div>
+
+<!-- Flexible Autowrite with Style Personality Card -->
+<div id="flexibleAutowriteWithStylePersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Flexible Autowrite with Style">
+        <div>
+            <h3 class="personality-title">Flexible Autowrite with Style</h3>
+            <p class="personality-description">Write anything in a specific style or emulate a specific author.</p>
+            <p class="personality-prompt">Write with a specific style or emulate an author.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Flexible Autowrite with Style">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Flexible Autowrite with Style">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Flexible Autowrite with Style">delete</button>
+    </label>
+</div>
+
+<!-- Ad Copy Generator Personality Card -->
+<div id="adCopyGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Ad Copy Generator">
+        <div>
+            <h3 class="personality-title">Ad Copy Generator</h3>
+            <p class="personality-description">Create compelling ad copy for a given product.</p>
+            <p class="personality-prompt">Generate ad copy for your product.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Ad Copy Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Ad Copy Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Ad Copy Generator">delete</button>
+    </label>
+</div>
+
+<!-- Instagram Caption Generator Personality Card -->
+<div id="instagramCaptionGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Instagram Caption Generator">
+        <div>
+            <h3 class="personality-title">Instagram Caption Generator</h3>
+            <p class="personality-description">Turn an idea, keyword, or draft into an engaging Instagram caption.</p>
+            <p class="personality-prompt">Craft a caption for your Instagram post.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Instagram Caption Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Instagram Caption Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Instagram Caption Generator">delete</button>
+    </label>
+</div>
+
+<!-- Flexible Press Release Generator Personality Card -->
+<div id="flexiblePressReleaseGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Flexible Press Release Generator">
+        <div>
+            <h3 class="personality-title">Flexible Press Release Generator</h3>
+            <p class="personality-description">Generate a press release based on a provided summary.</p>
+            <p class="personality-prompt">Create a press release for your announcement.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Flexible Press Release Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Flexible Press Release Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Flexible Press Release Generator">delete</button>
+    </label>
+</div>
+
+<!-- Discussion Post Commenter Personality Card -->
+<div id="discussionPostCommenterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Discussion Post Commenter">
+        <div>
+            <h3 class="personality-title">Discussion Post Commenter</h3>
+            <p class="personality-description">Generate insightful comments and improvement suggestions for discussion posts.</p>
+            <p class="personality-prompt">Comment on a discussion post.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Discussion Post Commenter">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Discussion Post Commenter">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Discussion Post Commenter">delete</button>
+    </label>
+</div>
+
+<!-- Listicle Subheadings Generator Personality Card -->
+<div id="listicleSubheadingsGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Listicle Subheadings Generator">
+        <div>
+            <h3 class="personality-title">Listicle Subheadings Generator</h3>
+            <p class="personality-description">Generate a list of subheadings for a given topic.</p>
+            <p class="personality-prompt">Create subheadings for your listicle.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Listicle Subheadings Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Listicle Subheadings Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Listicle Subheadings Generator">delete</button>
+    </label>
+</div>
+
+<!-- Greeting Card Writer Personality Card -->
+<div id="greetingCardWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Greeting Card Writer">
+        <div>
+            <h3 class="personality-title">Greeting Card Writer</h3>
+            <p class="personality-description">Writes a personalized message for a greeting card for a given occasion and recipient.</p>
+            <p class="personality-prompt">Write a message for your greeting card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Greeting Card Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Greeting Card Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Greeting Card Writer">delete</button>
+    </label>
+</div>
+
+<!-- Value Ladder Generator Personality Card -->
+<div id="valueLadderGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Value Ladder Generator">
+        <div>
+            <h3 class="personality-title">Greeting Card Writer</h3>
+            <p class="personality-description">Generate a business value ladder based on your product, target customer, and service or field.</p>
+            <p class="personality-prompt">Create a value ladder for your business.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Value Ladder Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Value Ladder Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Value Ladder Generator">delete</button>
+    </label>
+</div>
+
+<!-- Harry Potter Fanfiction Generator Personality Card -->
+<div id="harryPotterFanfictionGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Harry Potter Fanfiction Generator">
+        <div>
+            <h3 class="personality-title">Harry Potter Fanfiction Generator</h3>
+            <p class="personality-description">AI-generated fanfiction about Harry Potter characters.</p>
+            <p class="personality-prompt">Generate Harry Potter fanfiction.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Harry Potter Fanfiction Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Harry Potter Fanfiction Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Harry Potter Fanfiction Generator">delete</button>
+    </label>
+</div>
+
+<!-- Write Next Paragraph Personality Card -->
+<div id="writeNextParagraphPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Write Next Paragraph">
+        <div>
+            <h3 class="personality-title">Write Next Paragraph</h3>
+            <p class="personality-description">Generate a high-quality next paragraph or section based on existing text.</p>
+            <p class="personality-prompt">Write the next paragraph.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Write Next Paragraph">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Write Next Paragraph">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Write Next Paragraph">delete</button>
+    </label>
+</div>
+
+<!-- Generate Blog Intro Personality Card -->
+<div id="generateBlogIntroPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Generate Blog Intro">
+        <div>
+            <h3 class="personality-title">Generate Blog Intro</h3>
+            <p class="personality-description">Generate a high-quality introduction for a blog post on any topic.</p>
+            <p class="personality-prompt">Write an introduction for your blog post.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Generate Blog Intro">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Generate Blog Intro">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Generate Blog Intro">delete</button>
+    </label>
+</div>
+
+<!-- Technical Translator Personality Card -->
+<div id="technicalTranslatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Technical Translator">
+        <div>
+            <h3 class="personality-title">Technical Translator</h3>
+            <p class="personality-description">Rewrites technical writing in plain language for easy understanding.</p>
+            <p class="personality-prompt">Translate technical content into plain language.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Technical Translator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Technical Translator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Technical Translator">delete</button>
+    </label>
+</div>
+
+<!-- SEO-friendly Blog Post Writer Personality Card -->
+<div id="seoFriendlyBlogPostWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="SEO-friendly Blog Post Writer">
+        <div>
+            <h3 class="personality-title">SEO-friendly Blog Post Writer</h3>
+            <p class="personality-description">Generate high-quality, SEO-friendly blog posts based on given keywords or topics.</p>
+            <p class="personality-prompt">Write an SEO-friendly blog post.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-SEO-friendly Blog Post Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-SEO-friendly Blog Post Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-SEO-friendly Blog Post Writer">delete</button>
+    </label>
+</div>
+
+<!-- Research Assistant Personality Card -->
+<div id="researchAssistantPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Research Assistant">
+        <div>
+            <h3 class="personality-title">Research Assistant</h3>
+            <p class="personality-description">Summarize main points from research, papers, or reviews.</p>
+            <p class="personality-prompt">Summarize research findings.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Research Assistant">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Research Assistant">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Research Assistant">delete</button>
+    </label>
+</div>
+
+<!-- Startup Idea Generator Personality Card -->
+<div id="startupIdeaGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Startup Idea Generator">
+        <div>
+            <h3 class="personality-title">Startup Idea Generator</h3>
+            <p class="personality-description">Generate potential startup ideas based on a domain or industry.</p>
+            <p class="personality-prompt">Generate startup ideas.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Startup Idea Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Startup Idea Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Startup Idea Generator">delete</button>
+    </label>
+</div>
+
+<!-- Marketing Email Generator Personality Card -->
+<div id="marketingEmailGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Marketing Email Generator">
+        <div>
+            <h3 class="personality-title">Marketing Email Generator</h3>
+            <p class="personality-description">Draft a marketing email based on the content that should be included and goals.</p>
+            <p class="personality-prompt">Write a marketing email.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Marketing Email Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Marketing Email Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Marketing Email Generator">delete</button>
+    </label>
+</div>
+
+<!-- Restaurant Meal Picker Personality Card -->
+<div id="restaurantMealPickerPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Restaurant Meal Picker">
+        <div>
+            <h3 class="personality-title">Restaurant Meal Picker</h3>
+            <p class="personality-description">Get AI-generated dish recommendations based on a cuisine and location.</p>
+            <p class="personality-prompt">Get meal recommendations.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Restaurant Meal Picker">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Restaurant Meal Picker">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Restaurant Meal Picker">delete</button>
+    </label>
+</div>
+
+<!-- Company Name Generator Personality Card -->
+<div id="companyNameGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Company Name Generator">
+        <div>
+            <h3 class="personality-title">Company Name Generator</h3>
+            <p class="personality-description">Generate unique company names based on business information and preferences.</p>
+            <p class="personality-prompt">Generate company names.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Company Name Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Company Name Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Company Name Generator">delete</button>
+    </label>
+</div>
+
+<!-- Letter of Request Generator Personality Card -->
+<div id="letterOfRequestGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Letter of Request Generator">
+        <div>
+            <h3 class="personality-title">Letter of Request Generator</h3>
+            <p class="personality-description">Write clear, concise, and polite letters requesting a service or help.</p>
+            <p class="personality-prompt">Generate a letter of request.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Letter of Request Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Letter of Request Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Letter of Request Generator">delete</button>
+    </label>
+</div>
+
+<!-- Graduation Card Generator Personality Card -->
+<div id="graduationCardGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Graduation Card Generator">
+        <div>
+            <h3 class="personality-title">Graduation Card Generator</h3>
+            <p class="personality-description">Create a thoughtful graduation note based on given notes about your graduate.</p>
+            <p class="personality-prompt">Craft a graduation note.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Graduation Card Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Graduation Card Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Graduation Card Generator">delete</button>
+    </label>
+</div>
+
+<!-- Writing Improver Personality Card -->
+<div id="writingImproverPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Writing Improver">
+        <div>
+            <h3 class="personality-title">Writing Improver</h3>
+            <p class="personality-description">Improve grammar, vocabulary, and style in a section of text.</p>
+            <p class="personality-prompt">Improve writing quality.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Writing Improver">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Writing Improver">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Writing Improver">delete</button>
+    </label>
+</div>
+
+<!-- Anniversary Card Maker Personality Card -->
+<div id="anniversaryCardMakerPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Anniversary Card Maker">
+        <div>
+            <h3 class="personality-title">Anniversary Card Maker</h3>
+            <p class="personality-description">Craft a romantic and thoughtful anniversary card, incorporating important milestones and memories.</p>
+            <p class="personality-prompt">Create an anniversary card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Anniversary Card Maker">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Anniversary Card Maker">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Anniversary Card Maker">delete</button>
+    </label>
+</div>
+
+<!-- Sales Script Creator Personality Card -->
+<div id="salesScriptCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Sales Script Creator">
+        <div>
+            <h3 class="personality-title">Sales Script Creator</h3>
+            <p class="personality-description">Merge multiple sales scripts or background info into one seamless, high-quality script.</p>
+            <p class="personality-prompt">Create a sales script.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Sales Script Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Sales Script Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Sales Script Creator">delete</button>
+    </label>
+</div>
+
+<!-- Short Manuscript Creator Personality Card -->
+<div id="shortManuscriptCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Short Manuscript Creator">
+        <div>
+            <h3 class="personality-title">Short Manuscript Creator</h3>
+            <p class="personality-description">Create a detailed, optimistic short manuscript on a single topic.</p>
+            <p class="personality-prompt">Generate a short manuscript.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Short Manuscript Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Short Manuscript Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Short Manuscript Creator">delete</button>
+    </label>
+</div>
+
+<!-- Father's Day Card Creator Personality Card -->
+<div id="fathersDayCardCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Father's Day Card Creator">
+        <div>
+            <h3 class="personality-title">Father's Day Card Creator</h3>
+            <p class="personality-description">Create a thoughtful and well-written Father's Day card based on your notes or ideas.</p>
+            <p class="personality-prompt">Craft a Father's Day card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Father's Day Card Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Father's Day Card Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Father's Day Card Creator">delete</button>
+    </label>
+</div>
+
+<!-- Caption Creator Personality Card -->
+<div id="captionCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Caption Creator">
+        <div>
+            <h3 class="personality-title">Caption Creator</h3>
+            <p class="personality-description">Generate clever and concise social media captions based on your description.</p>
+            <p class="personality-prompt">Generate social media captions.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Caption Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Caption Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Caption Creator">delete</button>
+    </label>
+</div>
+
+<!-- Article Writer Personality Card -->
+<div id="articleWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Article Writer">
+        <div>
+            <h3 class="personality-title">Article Writer</h3>
+            <p class="personality-description">Generate detailed articles on any topic.</p>
+            <p class="personality-prompt">Write an article.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Article Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Article Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Article Writer">delete</button>
+    </label>
+</div>
+
+<!-- Answer Emails Personality Card -->
+<div id="answerEmailsPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Answer Emails">
+        <div>
+            <h3 class="personality-title">Answer Emails</h3>
+            <p class="personality-description">Effortlessly generate professional email responses.</p>
+            <p class="personality-prompt">Answer emails.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Answer Emails">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Answer Emails">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Answer Emails">delete</button>
+    </label>
+</div>
+
+<!-- Wedding Card Ideas Personality Card -->
+<div id="weddingCardIdeasPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Wedding Card Ideas">
+        <div>
+            <h3 class="personality-title">Wedding Card Ideas</h3>
+            <p class="personality-description">Create a heartfelt wedding card to congratulate the newlyweds and share your happiness for their future.</p>
+            <p class="personality-prompt">Craft a wedding card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Wedding Card Ideas">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Wedding Card Ideas">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Wedding Card Ideas">delete</button>
+    </label>
+</div>
+
+<!-- Essay with Bulleted Summary Personality Card -->
+<div id="essayWithBulletedSummaryPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Essay with Bulleted Summary">
+        <div>
+            <h3 class="personality-title">Essay with Bulleted Summary</h3>
+            <p class="personality-description">Analyze an essay topic statement or question and create a title, a simple bulleted summary, and a detailed long-form answer.</p>
+            <p class="personality-prompt">Create an essay with a bulleted summary.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Essay with Bulleted Summary">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Essay with Bulleted Summary">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Essay with Bulleted Summary">delete</button>
+    </label>
+</div>
+
+<!-- Resume Updater Personality Card -->
+<div id="resumeUpdaterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Resume Updater">
+        <div>
+            <h3 class="personality-title">Resume Updater</h3>
+            <p class="personality-description">Review and update your resume based on a specific job description.</p>
+            <p class="personality-prompt">Update your resume.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Resume Updater">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Resume Updater">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Resume Updater">delete</button>
+    </label>
+</div>
+
+<!-- Related Key Phrases Generator Personality Card -->
+<div id="relatedKeyPhrasesGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Related Key Phrases Generator">
+        <div>
+            <h3 class="personality-title">Related Key Phrases Generator</h3>
+            <p class="personality-description">Create alternative key phrases for your website SEO.</p>
+            <p class="personality-prompt">Generate related key phrases.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Related Key Phrases Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Related Key Phrases Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Related Key Phrases Generator">delete</button>
+    </label>
+</div>
+
+<!-- Keyphrase Generator from Meta Description Personality Card -->
+<div id="keyphraseGeneratorFromMetaDescriptionPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Keyphrase Generator from Meta Description">
+        <div>
+            <h3 class="personality-title">Keyphrase Generator from Meta Description</h3>
+            <p class="personality-description">Generate relevant keyphrases based on your website's meta description.</p>
+            <p class="personality-prompt">Generate keyphrases from meta description.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Keyphrase Generator from Meta Description">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Keyphrase Generator from Meta Description">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Keyphrase Generator from Meta Description">delete</button>
+    </label>
+</div>
+<!-- Sympathy Email Generator Personality Card -->
+<div id="sympathyEmailGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Sympathy Email Generator">
+        <div>
+            <h3 class="personality-title">Sympathy Email Generator</h3>
+            <p class="personality-description">Create a heartfelt sympathy email for a colleague during a loss.</p>
+            <p class="personality-prompt">Craft a sympathy email.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Sympathy Email Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Sympathy Email Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Sympathy Email Generator">delete</button>
+    </label>
+</div>
+
+<!-- Baby Shower Card Writer Personality Card -->
+<div id="babyShowerCardWriterPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Baby Shower Card Writer">
+        <div>
+            <h3 class="personality-title">Baby Shower Card Writer</h3>
+            <p class="personality-description">Craft a sweet and heartfelt card for expecting parents.</p>
+            <p class="personality-prompt">Write a baby shower card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Baby Shower Card Writer">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Baby Shower Card Writer">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Baby Shower Card Writer">delete</button>
+    </label>
+</div>
+
+<!-- New Year's Card Creator Personality Card -->
+<div id="newYearsCardCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="New Year's Card Creator">
+        <div>
+            <h3 class="personality-title">New Year's Card Creator</h3>
+            <p class="personality-description">Generates an optimistic and reflective New Year's card.</p>
+            <p class="personality-prompt">Create a New Year's card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-New Year's Card Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-New Year's Card Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-New Year's Card Creator">delete</button>
+    </label>
+</div>
+
+<!-- Valentine's Day Card Generator Personality Card -->
+<div id="valentinesDayCardGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Valentine's Day Card Generator">
+        <div>
+            <h3 class="personality-title">Valentine's Day Card Generator</h3>
+            <p class="personality-description">Generate a loving and sentimental Valentine's Day card based on your relationship.</p>
+            <p class="personality-prompt">Generate a Valentine's Day card.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Valentine's Day Card Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Valentine's Day Card Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Valentine's Day Card Generator">delete</button>
+    </label>
+</div>
+
+<!-- Christmas Card Message Generator Personality Card -->
+<div id="christmasCardMessageGeneratorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Christmas Card Message Generator">
+        <div>
+            <h3 class="personality-title">Christmas Card Message Generator</h3>
+            <p class="personality-description">Generate cheerful Christmas card messages, family updates, and season's greetings.</p>
+            <p class="personality-prompt">Generate a Christmas card message.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Christmas Card Message Generator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Christmas Card Message Generator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Christmas Card Message Generator">delete</button>
+    </label>
+</div>
+
+<!-- Product Tag Creator Personality Card -->
+<div id="productTagCreatorPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Product Tag Creator">
+        <div>
+            <h3 class="personality-title">Product Tag Creator</h3>
+            <p class="personality-description">Generate impactful and relevant tags for your products based on their descriptions.</p>
+            <p class="personality-prompt">Create product tags.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Product Tag Creator">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Product Tag Creator">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Product Tag Creator">delete</button>
+    </label>
+</div>
+
+<!-- Project Manager Updates Personality Card -->
+<div id="projectManagerUpdatesPersonality" style="display: none;">
+    <label class="card-personality">
+        <input type="radio" name="personality" value="Project Manager Updates">
+        <div>
+            <h3 class="personality-title">Project Manager Updates</h3>
+            <p class="personality-description">Generate clear, simple, and concise project updates as a project manager.</p>
+            <p class="personality-prompt">Create project manager updates.</p>
+        </div>
+        <button class="btn-textual btn-edit-card material-symbols-outlined" id="btn-edit-personality-Project Manager Updates">edit</button>
+        <button class="btn-textual btn-share-card material-symbols-outlined" id="btn-share-personality-Project Manager Updates">share</button>
+        <button class="btn-textual btn-delete-card material-symbols-outlined" id="btn-delete-personality-Project Manager Updates">delete</button>
+    </label>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <button class="btn-textual btn-edit-card material-symbols-outlined"
+                            id="btn-edit-personality-default">edit</button>
+                        <button class="btn-textual btn-share-card material-symbols-outlined"
+                            id="btn-share-personality-default">share</button>
+                    </label>
+                    <div id="personalitiesDiv"></div>
+                    <div class="btn-array" id="btn-array-personality-section">
+                        <button id="btn-add-personality">Create Your Own Style</button>
+                        <button id="btn-import-personality">Import</button>
+                        <button id="btn-clearall-personality">Clear All</button>
+                    </div>
+                </div>
+             
+
+                <div class="sidebar-section">
+                    <input type="text" placeholder="Paste API key here" id="apiKeyInput" class="input-field"></input>
+                    <h3>Step 1. Find a topic</h3>
+                    <label for="maxTokens">Max Output Tokens:</label>
+                    <input type="number" id="maxTokens" class="input-field" min="1" max="4000" value="1000"></input>
+                    <label for="safetySettings">Safety Settings:</label>
+                    <select id="safetySettings" class="input-field">
+                        <option value="safe">Safe</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="risky">Risky</option>
+                    </select>
+                </div>
+                
+            </div>
+
+
+
+            <div class="credits">
+                Made By Waleed Ajmal Built on Zodiac UI
+                <a href="https://github.com/mr.majboor">Source Code</a>
+            </div>
+        </div>
+
+        <div id="mainContent">
+            <div class="header">
+                <button class="material-symbols-outlined btn-textual" id="btn-show-sidebar">
+                    menu
+                </button>
+            </div>
+            <div class="message-container"></div>
+            <div class="message-box">
+                <textarea type="text" placeholder="Type your message here" id="messageInput"
+                    class="input-field"></textarea>
+                <button type="submit" class="btn-textual material-symbols-outlined" id="btn-send">send</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="header">
+            <button class="btn-textual" id="btn-hide-overlay">BACK</button>
+        </div>
+
+        <div class="form" id="form-add-personality">
+            <h1>Add Personality</h1>
+            <label for="personalityNameInput">Personality Name:</label>
+            <input type="text" placeholder="Personality Name" id="personalityNameInput" class="input-field"></input>
+            <label for="personalityDescriptionInput">Personality Description:</label>
+            <textarea id="personalityDescriptionInput" placeholder="Personality Description"
+                class="prompt-field"></textarea>
+            <label for="personalityImageURLInput">Personality Image URL:</label>
+            <input type="text" placeholder="Personality Image URL" id="personalityImageURLInput"
+                class="input-field"></input>
+            <label for="personalityPromptInput">Prompt:</label>
+            <textarea id="personalityPromptInput" placeholder="Personality Prompt" class="prompt-field"></textarea>
+            <button id="btn-submit-personality">Add Personality</button>
+        </div>
+
+        <div class="form" id="form-edit-personality">
+            <h1>Edit Personality</h1>
+            <label for="personalityNameInput">Personality Name:</label>
+            <input type="text" placeholder="Personality Name" id="personalityNameInput" class="input-field"></input>
+            <label for="personalityDescriptionInput">Personality Description:</label>
+            <textarea id="personalityDescriptionInput" placeholder="Personality Description"
+                class="prompt-field"></textarea>
+            <label for="personalityImageURLInput">Personality Image URL:</label>
+            <input type="text" placeholder="Personality Image URL" id="personalityImageURLInput"
+                class="input-field"></input>
+            <label for="personalityPromptInput">Prompt:</label>
+            <textarea id="personalityPromptInput" placeholder="Personality Prompt" class="prompt-field"></textarea>
+            <button id="btn-submit-personality-edit">Save</button>
+        </div>
+
+        <div id="whats-new">
+            <h1 id="header-version">Welcome to </h1>
+            <ul id="changelog">
+                <li>Ability to Create your own Writing Style</li>
+                <li>Share Created Styles</li>
+                <li>Stability</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+
+</body>
+
+</html>

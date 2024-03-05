@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro.js Example</title>
+  <!-- Include Intro.js CSS -->
+  <link href="https://unpkg.com/intro.js/introjs.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <button id="login">Login</button>
+  
+  <!-- Include Intro.js JavaScript -->
+  <script src="https://unpkg.com/intro.js/intro.js"></script>
+  <script>
+    // Initiate the tour
+    introJs().setOptions({
+      steps: [{
+        intro: "Hello world!"
+      }, {
+        element: document.querySelector('#login'),
+        intro: "Click here to login!"
+      }]
+    }).start();
+  </script>
+</body>
+</html>

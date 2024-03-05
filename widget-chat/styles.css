@@ -1,0 +1,37 @@
+/* Chat widget button styles */
+.chat-widget-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #fae794;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.chat-widget-button img {
+    width: 30px; /* Adjust the size of the chat icon as needed */
+    height: auto;
+}
+
+/* Chat widget container styles */
+.chat-widget-container {
+    position: fixed;
+    bottom: 90px; /* Adjust this value based on the size of your button */
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hide the chat widget */
+    z-index: 9998;
+}
+
+/* Your other styles go here */

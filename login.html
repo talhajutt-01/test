@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration Page</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .company-name {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .tabs-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap:10px
+    }
+
+    .tab {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ccc;
+      transition: background-color 0.3s;
+    }
+
+    .tab.active {
+      background-color: #aaa;
+    }
+
+    .auth-form {
+      text-align: center;
+    }
+
+    .input-container {
+      margin-bottom: 15px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1f9eff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .social-button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #dd4b39;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <!-- Use your logo image here -->
+      <img src="63fcd79d410b22ddf397e1b8\654272554402410a71c84ab9_6405c1cabdf9c69f05b1080e_otherside_logo_symbol.webp" alt="Logo" class="logo">
+      <div class="company-name">HyperWrite</div>
+    </div>
+
+    <div class="tabs-container">
+        <button class="tab active" id="login-tab">Log In</button>
+        <button class="tab" id="signup-tab">Sign Up</button>
+      </div>
+    <!-- Login Form -->
+    <div class="form-container" id="login-form">
+      <h2>Login</h2>
+      <div class="input-container">
+        <input type="email" id="username" placeholder="Email" required>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      <button class="submit-button" id="login-button">Login</button>
+    </div>
+    
+    <!-- Signup Form -->
+    <div class="form-container hidden" id="signup-form">
+      <h2>Sign Up</h2>
+      <div class="input-container">
+        <input type="email" id="regUsername" placeholder="Email" required>
+      </div>
+      <div class="input-container">
+        <input type="password" id="regPassword" placeholder="Password" required>
+      </div>
+      <button class="submit-button" id="register-button">Sign Up</button>
+    </div>
+    
+
+    
+  </div>
+
+  <script>
+    const loginTab = document.getElementById('login-tab');
+    const signupTab = document.getElementById('signup-tab');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('active');
+      signupTab.classList.remove('active');
+      loginForm.classList.remove('hidden');
+      signupForm.classList.add('hidden');
+    });
+
+    signupTab.addEventListener('click', () => {
+      loginTab.classList.remove('active');
+      signupTab.classList.add('active');
+      loginForm.classList.add('hidden');
+      signupForm.classList.remove('hidden');
+    });
+
+    document.getElementById("login-button").addEventListener("click", function(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // For demonstration purposes, let's assume successful login
+      if (username === "user" && password === "password") {
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+
+    document.getElementById("register-button").addEventListener("click", function(event) {
+      event.preventDefault();
+      const regUsername = document.getElementById("regUsername").value;
+      const regPassword = document.getElementById("regPassword").value;
+
+      // Here you would make a request to the registration API
+      // For demonstration purposes, let's assume successful registration
+      alert("Registration successful! Please login.");
+      document.getElementById("login-tab").click(); // Switch to login tab after successful registration
+    });
+  </script>
+</body>
+</html>

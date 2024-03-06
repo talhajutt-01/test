@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert</title>
+  <style>
+    /* Styling for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    }
+
+    /* Close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span onclick="window.location.href='index.html'" class="close">&times;</span>
+          <p>This is an alert message!</p>
+          <button onclick="window.location.href='https://autho0-e4utljthr-talhajutt-01s-projects.vercel.app/'">Go to Login</button>
+        </div>
+      </div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // When the page loads, show the modal
+  window.onload = function() {
+    modal.style.display = "block";
+  };
+
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
